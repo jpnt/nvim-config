@@ -1,0 +1,7 @@
+require 'impatient'
+require 'options'
+require 'mappings'
+require 'plugins'
+require 'treesitter'
+require 'nvim-lspconfig'
+require 'completion'
