@@ -45,7 +45,7 @@ return require('packer').startup(function()
   use {
     'jakewvincent/mkdnflow.nvim',
      config = function() require('mkdnflow').setup {} end
-}
+  }
 
 end)
 
