@@ -3,14 +3,14 @@ local opts = { noremap = true, silent = true }
 
 -- General mappings
 map('i', 'jk', '<ESC>', opts)
-map('', 'le', ':20Le<CR>', opts)
+map('n', 'ee', ':20Le<CR>', opts)
 
 -- Telescope mappings
-map('', 'ff', ':Telescope find_files<CR>', opts)
-map('', 'fg', ':Telescope live_grep<CR>', opts)
-map('', 'fb', ':Telescope buffers<CR>', opts)
-map('', 'fh', ':Telescope help_tags<CR>', opts)
-map('', 'fo', ':Telescope oldfiles<CR>', opts)
+map('n', 'ff', ':Telescope find_files<CR>', opts)
+map('n', 'fg', ':Telescope live_grep<CR>', opts)
+map('n', 'fb', ':Telescope buffers<CR>', opts)
+map('n', 'fh', ':Telescope help_tags<CR>', opts)
+map('n', 'fo', ':Telescope oldfiles<CR>', opts)
 
 -- LSP mappings
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
