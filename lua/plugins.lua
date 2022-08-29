@@ -4,8 +4,8 @@ return require('packer').startup(function()
   -- Plugins here
   use 'wbthomason/packer.nvim'
 
+  -- Gotta go fast
   use 'lewis6991/impatient.nvim'
-
   use 'nathom/filetype.nvim'
 
   use {
@@ -15,6 +15,8 @@ return require('packer').startup(function()
 
   -- Colorscheme
   use 'rafamadriz/neon'
+
+  use 'nvim-treesitter/nvim-treesitter'
 
   use {
     'windwp/nvim-autopairs',
@@ -27,10 +29,9 @@ return require('packer').startup(function()
     config = function() require('lualine').setup {} end
   }
 
-  use 'nvim-treesitter/nvim-treesitter'
-
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use 'onsails/lspkind.nvim' -- Symbols for completion
   use {
     'williamboman/nvim-lsp-installer',
     config = function() require('nvim-lsp-installer').setup {} end
@@ -42,6 +43,7 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/nvim-cmp'
 
+  -- Markdown file jumping support
   use {
     'jakewvincent/mkdnflow.nvim',
      config = function() require('mkdnflow').setup {} end
