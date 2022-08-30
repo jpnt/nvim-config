@@ -6,7 +6,6 @@ return require('packer').startup(function()
 
   -- Gotta go fast
   use 'lewis6991/impatient.nvim'
-  use 'nathom/filetype.nvim'
 
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
