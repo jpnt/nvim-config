@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 -- General mappings
 map('i', 'jk', '<ESC>', opts)
-map('n', 'ee', ':20Le<CR>', opts)
+map('n', 'ee', ':NvimTreeToggle<CR>', opts)
 
 -- Telescope mappings
 map('n', 'ff', ':Telescope find_files<CR>', opts)

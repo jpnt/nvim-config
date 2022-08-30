@@ -28,6 +28,11 @@ return require('packer').startup(function()
     config = function() require('lualine').setup {} end
   }
 
+  use {
+    'kyazdani42/nvim-tree.lua',
+    config = function() require('nvim-tree').setup {} end
+  }
+
   -- LSP
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind.nvim' -- Symbols for completion
