@@ -53,5 +53,11 @@ return require('packer').startup(function()
      config = function() require('mkdnflow').setup {} end
   }
 
+  -- Automatic indentation
+  use {
+    'Darazaki/indent-o-matic',
+    config = function() require('indent-o-matic').setup {} end
+  }
+
 end)
 
