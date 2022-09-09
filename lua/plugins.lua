@@ -7,27 +7,32 @@ return require('packer').startup(function()
   -- Gotta go fast
   use 'lewis6991/impatient.nvim'
 
+  -- Fuzzy finder
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  -- Treesitter
+  use 'nvim-treesitter/nvim-treesitter'
+
   -- Colorscheme
   use 'rafamadriz/neon'
 
-  use 'nvim-treesitter/nvim-treesitter'
-
+  -- Automatically close pairs
   use {
     'windwp/nvim-autopairs',
     config = function() require('nvim-autopairs').setup {} end
   }
 
+  -- Status line
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true },
     config = function() require('lualine').setup {} end
   }
 
+  -- File explorer tree
   use {
     'kyazdani42/nvim-tree.lua',
     config = function() require('nvim-tree').setup {} end
@@ -58,6 +63,9 @@ return require('packer').startup(function()
     'Darazaki/indent-o-matic',
     config = function() require('indent-o-matic').setup {} end
   }
+
+  -- Debug Adapter Protocol
+  use 'mfussenegger/nvim-dap'
 
 end)
 
