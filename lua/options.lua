@@ -42,4 +42,7 @@ g.maplocalleader = ''
 g.netrw_banner = 0
 
 -- Colorscheme
-vim.cmd [[colorscheme neon]]
+local ok, _ = pcall(vim.cmd, 'colorscheme neon')
+if not ok then
+  vim.cmd 'colorscheme default' -- If not installed, set colorscheme to default
+end

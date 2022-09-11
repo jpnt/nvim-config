@@ -6,6 +6,7 @@ local servers = {
   'gopls'
   }
 
+-- Setup each language servers
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {}
 end
