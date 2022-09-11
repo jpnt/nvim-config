@@ -17,7 +17,7 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter'
 
   -- Colorscheme
-  --use 'rafamadriz/neon'
+  use 'rafamadriz/neon'
 
   -- Automatically close pairs
   use {
