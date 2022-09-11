@@ -42,8 +42,8 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind.nvim' -- Symbols for completion
   use {
-    'williamboman/nvim-lsp-installer',
-    config = function() require('nvim-lsp-installer').setup {} end
+    'williamboman/mason.nvim', -- LSP installer
+    config = function() require('mason').setup {} end
   }
 
   -- Completion
