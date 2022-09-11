@@ -1,11 +1,3 @@
--- Use an on_attach function to only map the following keys
--- after the language server attaches to the current buffer
-local on_attach = function(client, bufnr)
-  -- Enable completion triggered by <c-x><c-o>
-  vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-end
-
--- Language servers
 local nvim_lsp = require('lspconfig')
 local servers = {
   -- Add servers here
@@ -13,23 +5,27 @@ local servers = {
   'rust_analyzer',
   'gopls'
   }
+
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {}
 end
 
--- Fix `Undefined global x` error
+-- Configuration for lua
 require('lspconfig').sumneko_lua.setup {
   settings = {
     Lua = {
+      runtime = {
+        version = 'LuaJIT',
+      },
       diagnostics = {
-        globals = {
-          'vim',
-          'bufnr',
-          'use'
-        }
-      }
-    }
-  }
+        globals = { 'vim', 'bufnr', 'use' },
+      },
+      workspace = {
+        library = vim.api.nvim_get_runtime_file('', true)
+      },
+      telemetry = { enable = false, },
+    },
+  },
 }
 
 -- Diagnostics signs on the line number column
