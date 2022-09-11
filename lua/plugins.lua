@@ -38,7 +38,7 @@ return require('packer').startup(function()
     config = function() require('nvim-tree').setup {} end
   }
 
-  -- LSP
+  -- Language Server Protocol
   use 'neovim/nvim-lspconfig'
   use 'onsails/lspkind.nvim' -- Symbols for completion
   use {
@@ -64,8 +64,28 @@ return require('packer').startup(function()
     config = function() require('indent-o-matic').setup {} end
   }
 
-  -- Debug Adapter Protocol
+  -- Debugging
   use 'mfussenegger/nvim-dap'
+  use 'rcarriga/nvim-dap-ui'
+  use 'theHamsta/nvim-dap-virtual-text'
+  use 'nvim-telescope/telescope-dap.nvim'
+
+  -- Git decorations
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function() require('gitsigns').setup {} end
+  }
+
+  -- Snippet engine
+  use 'L3MON4D3/LuaSnip'
+  use 'saadparwaiz1/cmp_luasnip'
+  use {
+    'rafamadriz/friendly-snippets',
+    config = function() require('luasnip.loaders.from_vscode').lazy_load() end
+  }
+
+  -- Rust lang
+  use 'simrat39/rust-tools.nvim'
 
 end)
 

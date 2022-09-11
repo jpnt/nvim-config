@@ -7,10 +7,30 @@ end
 
 -- Language servers
 local nvim_lsp = require('lspconfig')
-local servers = { 'rust_analyzer' } -- Add servers here
+local servers = {
+  -- Add servers here
+  'sumneko_lua',
+  'rust_analyzer',
+  'gopls'
+  }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {}
 end
+
+-- Fix `Undefined global x` error
+require('lspconfig').sumneko_lua.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = {
+          'vim',
+          'bufnr',
+          'use'
+        }
+      }
+    }
+  }
+}
 
 -- Diagnostics signs on the line number column
 local signs = { Error = " ", Warn = " ", Hint = " ", Info = " " }
