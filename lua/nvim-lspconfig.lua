@@ -1,7 +1,7 @@
 local nvim_lsp = require('lspconfig')
 local servers = {
   -- Add servers here
-  'sumneko_lua',
+  'lua_ls',
   'rust_analyzer',
   'gopls'
   }
@@ -12,7 +12,7 @@ for _, lsp in ipairs(servers) do
 end
 
 -- Configuration for lua
-require('lspconfig').sumneko_lua.setup {
+require('lspconfig').lua_ls.setup {
   settings = {
     Lua = {
       runtime = {

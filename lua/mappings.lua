@@ -4,7 +4,7 @@ local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 -- General mappings
 map('i', 'jk', '<ESC>', opts)
-map('n', 'ee', ':NvimTreeToggle<CR>', opts)
+map('n', '<C-e>', ':NvimTreeToggle<CR>', opts) -- Sorry Vim users
 
 -- Telescope mappings
 map('n', 'ff', ':Telescope find_files<CR>', opts)

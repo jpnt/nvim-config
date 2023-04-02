@@ -15,6 +15,7 @@ o.clipboard = 'unnamedplus'
 o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
 o.colorcolumn = '80'
 o.completeopt = 'menu,menuone,noselect'
+o.background = 'dark'
 
 -- Undo and backup options
 o.backup = false
