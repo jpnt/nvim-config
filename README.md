@@ -28,13 +28,13 @@ Neovim configuration files are placed under the directory:
 ## configuration structure
 
 ```mermaid
-graph NV;
-  neovim-->init.lua;
-  init.lua-->options.lua;
-  init.lua-->keymaps.lua;
-  init.lua-->plugins.lua;
-  init.lua-->completion.lua;
-  init.lua-->nvim-lspconfig.lua;
+graph LR;
+    neovim-->init.lua;
+    init.lua-->options.lua;
+    init.lua-->keymaps.lua;
+    init.lua-->plugins.lua;
+    init.lua-->completion.lua;
+    init.lua-->nvim-lspconfig.lua;
 ```
 
 ## Plugin list
