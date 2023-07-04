@@ -45,6 +45,7 @@ graph TD;
     init.lua-->keymaps;
 
     plugin_config-->lualine;
+    plugin_config-->alpha-nvim;
     plugin_config-->nvim-autopairs;
     plugin_config-->nvim-tree;
     plugin_config-->treesitter;
@@ -93,3 +94,4 @@ graph TD;
 - gruvbox
 - nvim-web-devicons
 - lualine
+- alpha-nvim

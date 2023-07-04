@@ -17,6 +17,7 @@ local plugins = { -- Add plugins here!
   "ellisonleao/gruvbox.nvim",
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
+  "goolord/alpha-nvim",
 
   -- QoL improvements
   "nvim-tree/nvim-tree.lua",
