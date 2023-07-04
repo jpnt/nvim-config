@@ -39,18 +39,18 @@ The following UML diagram represents how the configuration is arranged:
 graph TD;
     neovim-->init.lua;
 
-    init.lua-->plugins.lua;
-    init.lua-->plugin_config;
-    init.lua-->options.lua;
-    init.lua-->keymaps.lua;
+    init.lua-->plugins;
+    init.lua--->plugin_config;
+    init.lua-->options;
+    init.lua-->keymaps;
 
-    plugin_config-->lualine.lua;
+    plugin_config-->lualine;
     plugin_config-->nvim-autopairs;
-    plugin_config-->nvim-tree.lua;
-    plugin_config-->treesitter.lua;
+    plugin_config-->nvim-tree;
+    plugin_config-->treesitter;
     plugin_config-->telescope;
-    plugin_config-->completion.lua;
-    plugin_config-->nvim-lspconfig.lua;
+    plugin_config-->completion;
+    plugin_config-->nvim-lspconfig;
     plugin_config-->neogit;
     plugin_config-->gitsigns;
 ```
