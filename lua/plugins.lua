@@ -18,6 +18,7 @@ local plugins = { -- Add plugins here!
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "goolord/alpha-nvim",
+  "xiyaowong/transparent.nvim",
 
   -- QoL improvements
   "nvim-tree/nvim-tree.lua",
