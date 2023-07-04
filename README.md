@@ -36,7 +36,7 @@ git clone https://github.com/jpnt/nvim-config.git $HOME/.config/nvim --depth=1
 The following UML diagram represents how the configuration is arranged:
 
 ```mermaid
-graph TD;
+graph LR;
     neovim-->init.lua;
 
     init.lua-->plugins;
