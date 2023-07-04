@@ -5,7 +5,7 @@ Personal neovim configuration
 ## Goals
 - Beautiful coding interface
 - Simple and easy to configure
-- One language for plugins and configuration
+- One language for configuration and plugins
 - Minimal use of plugins
 - Straight forward plugin management
 - Run really fast
@@ -13,6 +13,7 @@ Personal neovim configuration
 ## Features
 - Organized configuration structure
 - Commented configuration files
+- Modern plugin manager
 - 100% lua configuration and plugins
 - Code highlighting
 - Fuzzy finder
@@ -21,33 +22,51 @@ Personal neovim configuration
 - Git features (changes, blame, etc)
 
 ## Install
-Neovim configuration files are placed under the directory:
+Neovim configuration files are generally placed under the directory:
 
 `$HOME/.config/nvim`
 
-## configuration structure
+To clone the contents of this repository to that directory use the following command:
+
+```bash
+git clone https://github.com/jpnt/nvim-config.git $HOME/.config/nvim --depth=1
+```
+
+## Configuration structure
+The following UML diagram represents how the configuration is arranged:
 
 ```mermaid
 graph LR;
     neovim-->init.lua;
+
+    init.lua-->plugins.lua;
+    init.lua-->plugin_config;
     init.lua-->options.lua;
     init.lua-->keymaps.lua;
-    init.lua-->plugins.lua;
-    init.lua-->completion.lua;
-    init.lua-->nvim-lspconfig.lua;
+
+    plugin_config-->lualine.lua;
+    plugin_config-->nvim-autopairs;
+    plugin_config-->nvim-tree.lua;
+    plugin_config-->treesitter.lua;
+    plugin_config-->telescope;
+    plugin_config-->completion.lua;
+    plugin_config-->nvim-lspconfig.lua;
+    plugin_config-->neogit;
+    plugin_config-->gitsigns;
 ```
 
 ## Plugin list
 
-#### Plugin installer
+#### Plugin manager
 - lazy
- 
+
 #### Code highlighting
 - treesitter
- 
+
 #### Fuzzy finder
 - telescope
- 
+- plenary (dependency)
+
 #### Autocomplete and LSP
 - nvim-lspconfig
 - lspkind
@@ -65,11 +84,12 @@ graph LR;
 - neogit
 - gitsigns
 
-#### Editor appearance
-- lualine
-
 #### QoL improvements
 - nvim-tree
 - nvim-autopairs
 - indent-o-matic
 
+#### Editor appearance
+- gruvbox
+- nvim-web-devicons
+- lualine

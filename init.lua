@@ -1,8 +1,4 @@
-require 'impatient'
-require 'options'
-require 'mappings'
-require 'plugins'
-require 'treesitter'
-require 'nvim-lspconfig'
-require 'completion'
-require 'dap-config'
+require("plugins")
+require("plugin_config")
+require("options")
+require("keymaps")

@@ -1,14 +1,12 @@
 local cmp = require('cmp')
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 cmp.setup({
   snippet = {
     expand = function (args)
       require('luasnip').lsp_expand(args.body)
     end,
-  },
-  window = {
-    --completion = cmp.config.window.bordered(),
-    --documentation = cmp.config.window.bordered(),
   },
   mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),
@@ -21,11 +19,12 @@ cmp.setup({
     { name = 'nvim_lsp' },
     { name = 'buffer' },
     { name = 'path' },
-    { name = 'luasnip' }, -- TODO: this is not working!
+    { name = 'cmdline' },
+    { name = 'luasnip' },
   })
 })
 
--- lspkind configuration
+-- Lspkind
 local lspkind = require('lspkind')
 cmp.setup {
   formatting = {

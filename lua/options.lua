@@ -1,30 +1,33 @@
-local o = vim.o
-local g = vim.g
+local o = vim.o -- Options
+local g = vim.g -- Global variables
+
+-- Colorscheme
+o.background = "dark"
+vim.cmd([[colorscheme gruvbox]])
 
 -- General options
 o.number = true
 o.relativenumber = true
 o.numberwidth = 5
 o.list = true
-o.mouse = 'a'
+o.mouse = "a"
 o.ignorecase = true
 o.smartcase = true
 o.scrolloff = 8
 o.termguicolors = true
-o.clipboard = 'unnamedplus'
-o.listchars = 'trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂'
-o.colorcolumn = '80'
-o.completeopt = 'menu,menuone,noselect'
-o.background = 'dark'
+o.clipboard = "unnamedplus"
+o.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
+o.colorcolumn = "80"
+o.completeopt = "menu,menuone,noselect"
 
--- Undo and backup options
+-- Undo and backup
 o.backup = false
 o.writebackup = false
 o.undofile = true
 o.swapfile = false
-o.backupdir = '/tmp/'
-o.undodir = '/tmp/'
-o.directory = '/tmp/'
+o.backupdir = "/tmp/"
+o.undodir = "/tmp/"
+o.directory = "/tmp/"
 o.history = 50
 
 -- Better buffer splitting
@@ -36,14 +39,11 @@ o.timeoutlen = 500
 o.updatetime = 200
 
 -- Map <leader> to space
-g.mapleader = ''
-g.maplocalleader = ''
+g.mapleader = " "
+g.maplocalleader = " "
 
 -- Netrw options
 g.netrw_banner = 0
 
--- Colorscheme
-local ok, _ = pcall(vim.cmd, 'colorscheme neon')
-if not ok then
-  vim.cmd 'colorscheme default' -- If not installed, set colorscheme to default
-end
+-- Experimental Lua module loader
+vim.loader.enable()
