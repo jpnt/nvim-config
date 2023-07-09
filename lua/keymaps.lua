@@ -20,6 +20,9 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 -- Neogit
 map("n", "<C-g>", ":Neogit<CR>", opts)
 
+-- Hop
+map("n", "\\", ":HopAnywhere<CR>", opts)
+
 -- Telescope
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, {})
