@@ -25,6 +25,7 @@ local plugins = { -- Add plugins here!
   "windwp/nvim-autopairs",
   "Darazaki/indent-o-matic",
   "phaazon/hop.nvim",
+  "vladdoster/remember.nvim",
 
   -- Code highlighting
   "nvim-treesitter/nvim-treesitter",
