@@ -26,6 +26,7 @@ local plugins = { -- Add plugins here!
   "Darazaki/indent-o-matic",
   "phaazon/hop.nvim",
   "vladdoster/remember.nvim",
+  "terrortylor/nvim-comment",
 
   -- Code highlighting
   "nvim-treesitter/nvim-treesitter",
