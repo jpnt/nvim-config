@@ -4,18 +4,18 @@ Personal neovim configuration
 
 ## Goals
 - Beautiful coding interface
+- Run really fast
 - Simple and easy to configure
 - One language for configuration and plugins
 - Minimal use of plugins
 - Straight forward plugin management
-- Run really fast
 
 ## Features
 - Organized configuration structure
 - Commented configuration files
 - Modern plugin manager
 - 100% lua configuration and plugins
-- Code highlighting
+- Code highlighting and treesitter
 - Fuzzy finder
 - Autocompletion and LSP
 - Code snippets
@@ -33,7 +33,7 @@ git clone https://github.com/jpnt/nvim-config.git $HOME/.config/nvim --depth=1
 ```
 
 ## Configuration structure
-The following UML diagram represents how the configuration is arranged:
+The following diagram represents how the configuration is arranged:
 
 ```mermaid
 graph LR;
@@ -58,40 +58,4 @@ graph LR;
 
 ## Plugin list
 
-#### Plugin manager
-- lazy
-
-#### Code highlighting
-- treesitter
-
-#### Fuzzy finder
-- telescope
-- plenary (dependency)
-
-#### Autocomplete and LSP
-- nvim-lspconfig
-- lspkind
-- cmp-nvim-lsp
-- cmp-buffer
-- cmp-path
-- cmp-cmdline
-- nvim-cmp
-
-#### Code snippets
-- LuaSnip
-- friendly-snippets
-
-#### Git features
-- neogit
-- gitsigns
-
-#### QoL improvements
-- nvim-tree
-- nvim-autopairs
-- indent-o-matic
-
-#### Editor appearance
-- gruvbox
-- nvim-web-devicons
-- lualine
-- alpha-nvim
+The set of plugins can be seen at lua/plugins.lua
