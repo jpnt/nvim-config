@@ -59,3 +59,11 @@ graph LR;
 ## Plugin list
 
 The set of plugins can be seen at lua/plugins.lua
+
+## Treesitter errors after updating plugins through Lazy
+
+Try the following commands to fix the issue:
+
+`:TSUpdate`
+
+`:TSUpdateSync`
