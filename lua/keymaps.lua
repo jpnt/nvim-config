@@ -3,16 +3,20 @@ local opts = { noremap = true, silent = true }
 --local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 -- General
-map("i", "jk", "<ESC>", opts) -- Quickly get into normal mode
+map("i", "jk", "<ESC>", opts)            -- Quickly get into normal mode
 map("n", "<leader>h", ":nohlsearch<CR>") -- Disable highlighted search results
-map("i", "<C-u>", "<ESC>viwUea") -- Turn the word under cursor to upper case
-map("i", "<c-t>", "<Esc>b~lea") -- Turn the current word into title case
+map("i", "<C-u>", "<ESC>viwUea")         -- Turn the word under cursor to upper case
+map("i", "<c-t>", "<Esc>b~lea")          -- Turn the current word into title case
 
 -- Navigate vim panes better
 map("n", "<C-k>", ":wincmd k<CR>")
 map("n", "<C-j>", ":wincmd j<CR>")
 map("n", "<C-h>", ":wincmd h<CR>")
 map("n", "<C-l>", ":wincmd l<CR>")
+
+-- Navigate buffers
+map("n", "<Tab>", ":bnext<CR>")
+map("n", "<S-Tab>", ":bprevious<CR>")
 
 -- NvimTree
 map("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
@@ -63,4 +67,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
   end,
 })
-
