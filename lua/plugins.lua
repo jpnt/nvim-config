@@ -27,6 +27,7 @@ local plugins = { -- Add plugins here!
   "phaazon/hop.nvim",
   "vladdoster/remember.nvim",
   "terrortylor/nvim-comment",
+  "akinsho/toggleterm.nvim",
 
   -- Code highlighting
   "nvim-treesitter/nvim-treesitter",

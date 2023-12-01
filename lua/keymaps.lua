@@ -27,6 +27,9 @@ map("n", "<C-g>", ":Neogit<CR>", opts)
 -- Hop
 map("n", "\\", ":HopAnywhere<CR>", opts)
 
+-- Toggleterm
+map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
+
 -- Telescope
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, {})
