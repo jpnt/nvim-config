@@ -30,7 +30,10 @@ local plugins = { -- Add plugins here!
   "akinsho/toggleterm.nvim",
 
   -- Code highlighting
-  "nvim-treesitter/nvim-treesitter",
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+  },
 
   -- Fuzzy finder
   {
