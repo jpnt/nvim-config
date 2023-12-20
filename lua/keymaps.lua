@@ -7,7 +7,7 @@ map("i", "jk", "<ESC>", opts)            -- Quickly get into normal mode
 map("n", "<leader>h", ":nohlsearch<CR>") -- Disable highlighted search results
 map("i", "<C-u>", "<ESC>viwUea")         -- Turn the word under cursor to upper case
 map("i", "<c-t>", "<Esc>b~lea")          -- Turn the current word into title case
-map("n", "<leader>cd", ":cd %:p:h<CR>", opts) -- Change to current directory
+map("n", "<leader>cd", ":cd %:p:h<CR>")  -- Change to current directory
 
 -- Navigate vim panes better
 map("n", "<C-k>", ":wincmd k<CR>")
@@ -27,6 +27,7 @@ map("n", "<C-g>", ":Neogit<CR>", opts)
 
 -- Hop
 map("n", "\\", ":HopAnywhere<CR>", opts)
+map("n", "<leader>\\", ":HopWord<CR>", opts)
 
 -- Toggleterm
 map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
