@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = { -- Add plugins here!
   -- Editor appearance
-  "ellisonleao/gruvbox.nvim",
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "goolord/alpha-nvim",
@@ -39,7 +39,7 @@ local plugins = { -- Add plugins here!
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.2",
-    dependencies = "nvim-lua/plenary.nvim"
+    dependencies = "nvim-lua/plenary.nvim",
   },
 
   -- Autocomplete and LSP
