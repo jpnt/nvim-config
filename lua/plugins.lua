@@ -28,6 +28,7 @@ local plugins = { -- Add plugins here!
   "vladdoster/remember.nvim",
   "terrortylor/nvim-comment",
   "akinsho/toggleterm.nvim",
+  { 'echasnovski/mini.tabline', version = '*' },
 
   -- Code highlighting
   {

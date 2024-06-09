@@ -1,3 +1,4 @@
+-- Enable plugins
 require("plugin_config/lualine")
 require("plugin_config/alpha-nvim")
 require("plugin_config/nvim-autopairs")
@@ -12,3 +13,4 @@ require("plugin_config/hop")
 require("plugin_config/remember-nvim")
 require("plugin_config/nvim-comment")
 require("plugin_config/toggleterm")
+require("plugin_config/tabline")
