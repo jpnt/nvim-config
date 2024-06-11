@@ -28,6 +28,11 @@ local plugins = { -- Add plugins here!
   "vladdoster/remember.nvim",
   "terrortylor/nvim-comment",
   "akinsho/toggleterm.nvim",
+  {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    dependencies = "nvim-lua/plenary.nvim",
+  },
 
   -- Code highlighting
   {

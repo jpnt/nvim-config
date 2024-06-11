@@ -1,6 +1,5 @@
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
---local bufopts = { noremap = true, silent = true, buffer = bufnr }
 
 -- General
 map("i", "jk", "<ESC>", opts)            -- Quickly get into normal mode
@@ -8,12 +7,6 @@ map("n", "<leader>h", ":nohlsearch<CR>") -- Disable highlighted search results
 map("i", "<C-u>", "<ESC>viwUea")         -- Turn the word under cursor to upper case
 map("i", "<c-t>", "<Esc>b~lea")          -- Turn the current word into title case
 map("n", "<leader>cd", ":cd %:p:h<CR>")  -- Change to current directory
-
--- Navigate vim panes better
-map("n", "<C-k>", ":wincmd k<CR>")
-map("n", "<C-j>", ":wincmd j<CR>")
-map("n", "<C-h>", ":wincmd h<CR>")
-map("n", "<C-l>", ":wincmd l<CR>")
 
 -- Navigate buffers
 map("n", "<Tab>", ":bnext<CR>")
@@ -72,3 +65,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
   end,
 })
+
+-- Harpoon
+local harpoon = require("harpoon")
+
+harpoon:setup()
+
+map("n", "<leader>a", function() harpoon:list():add() end)
+map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
+
+map("n", "<C-h>", function() harpoon:list():select(1) end)
+map("n", "<C-j>", function() harpoon:list():select(2) end)
+map("n", "<C-k>", function() harpoon:list():select(3) end)
+map("n", "<C-l>", function() harpoon:list():select(4) end)
