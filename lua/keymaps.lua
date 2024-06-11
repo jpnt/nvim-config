@@ -45,7 +45,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
     vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
     -- Buffer local mappings
-    local opts = { buffer = ev.buf }
+    opts = { buffer = ev.buf }
     map("n", "gD", vim.lsp.buf.declaration, opts)
     map("n", "gd", vim.lsp.buf.definition, opts)
     map("n", "K", vim.lsp.buf.hover, opts)
