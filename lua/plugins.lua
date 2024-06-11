@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = { -- Add plugins here!
   -- Editor appearance
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "goolord/alpha-nvim",
@@ -28,7 +28,6 @@ local plugins = { -- Add plugins here!
   "vladdoster/remember.nvim",
   "terrortylor/nvim-comment",
   "akinsho/toggleterm.nvim",
-  { 'echasnovski/mini.tabline', version = '*' },
 
   -- Code highlighting
   {

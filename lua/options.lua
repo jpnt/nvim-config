@@ -3,7 +3,7 @@ local g = vim.g -- Global variables
 
 -- Colorscheme
 o.background = "dark"
-vim.cmd([[colorscheme catppuccin-mocha]])
+vim.cmd([[colorscheme moonfly]])
 
 -- General options
 o.number = true
