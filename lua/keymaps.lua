@@ -48,9 +48,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
     opts = { buffer = ev.buf }
     map("n", "gD", vim.lsp.buf.declaration, opts)
     map("n", "gd", vim.lsp.buf.definition, opts)
-    map("n", "K", vim.lsp.buf.hover, opts)
+    map("n", "gs", vim.lsp.buf.hover, opts)
     map("n", "gi", vim.lsp.buf.implementation, opts)
-    map("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+    map("n", "gS", vim.lsp.buf.signature_help, opts)
     map("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
     map("n", "<leader>wr", vim.lsp.buf.remove_workspace_folder, opts)
     map("n", "<leader>wl", function()
