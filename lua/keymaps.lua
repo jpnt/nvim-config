@@ -2,11 +2,12 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- General
-map("i", "jk", "<ESC>", opts)            -- Quickly get into normal mode
-map("n", "<leader>h", ":nohlsearch<CR>") -- Disable highlighted search results
-map("i", "<C-u>", "<ESC>viwUea")         -- Turn the word under cursor to upper case
-map("i", "<c-t>", "<Esc>b~lea")          -- Turn the current word into title case
-map("n", "<leader>cd", ":cd %:p:h<CR>")  -- Change to current directory
+map("i", "kj", "<ESC>", opts)              -- Quickly get into normal mode
+map("i", "jk", "<ESC>", opts)              -- ""
+map("n", "<ESC>", ":nohlsearch<CR>", opts) -- Disable highlighted search results
+map("i", "<C-u>", "<ESC>viwUea")           -- Turn the word under cursor to upper case
+map("i", "<C-t>", "<ESC>b~lea")            -- Turn the current word into title case
+map("n", "<leader>cd", ":cd %:p:h<CR>")    -- Change to current directory
 
 -- Navigate buffers
 map("n", "<Tab>", ":bnext<CR>")
@@ -23,7 +24,7 @@ map("n", "\\", ":HopAnywhere<CR>", opts)
 map("n", "<leader>\\", ":HopWord<CR>", opts)
 
 -- Toggleterm
-map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
+map("n", "<leader>t", ":ToggleTerm<CR>", opts)
 
 -- Telescope
 local builtin = require("telescope.builtin")
