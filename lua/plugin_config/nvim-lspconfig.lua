@@ -4,6 +4,7 @@ local servers = {
   "lua_ls",
   "clangd",
   "rust_analyzer",
+  "ruff",
 }
 
 -- Setup each language servers
