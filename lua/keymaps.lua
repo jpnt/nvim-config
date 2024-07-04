@@ -26,6 +26,9 @@ map("n", "<leader>\\", ":HopWord<CR>", opts)
 -- Toggleterm
 map("n", "<leader>t", ":ToggleTerm<CR>", opts)
 
+-- Compile mode
+map("n", "<leader>cc", ":Compile<CR>", opts)
+
 -- Telescope
 local builtin = require("telescope.builtin")
 map("n", "<leader>ff", builtin.find_files, {})
