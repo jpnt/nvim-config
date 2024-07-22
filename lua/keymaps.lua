@@ -24,7 +24,7 @@ map("n", "\\", ":HopAnywhere<CR>", opts)
 map("n", "<leader>\\", ":HopWord<CR>", opts)
 
 -- Toggleterm
-map("n", "<leader>t", ":ToggleTerm<CR>", opts)
+map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
 
 -- Compile mode
 map("n", "<leader>cc", ":Compile<CR>", opts)
