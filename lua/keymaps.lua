@@ -24,7 +24,7 @@ local sj = require("sj")
 sj.setup()
 map("n", "\\", sj.run)
 map("n", "<A-,>", sj.prev_match)
-map("n", "<A-.>", sj.next_match)
+map("n", "<A-;>", sj.next_match)
 map("n", "<leader>\\", sj.redo)
 
 -- Toggleterm
