@@ -19,9 +19,13 @@ map("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
 -- Neogit
 map("n", "<C-g>", ":Neogit<CR>", opts)
 
--- Hop
-map("n", "\\", ":HopAnywhere<CR>", opts)
-map("n", "<leader>\\", ":HopWord<CR>", opts)
+-- SJ - Search and Jump
+local sj = require("sj")
+sj.setup()
+map("n", "\\", sj.run)
+map("n", "<A-,>", sj.prev_match)
+map("n", "<A-.>", sj.next_match)
+map("n", "<leader>\\", sj.redo)
 
 -- Toggleterm
 map("n", "<leader>tt", ":ToggleTerm<CR>", opts)

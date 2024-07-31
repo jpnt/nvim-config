@@ -24,7 +24,7 @@ local plugins = { -- Add plugins here!
   "nvim-tree/nvim-tree.lua",
   "windwp/nvim-autopairs",
   "Darazaki/indent-o-matic",
-  "phaazon/hop.nvim",
+  "woosaaahh/sj.nvim",
   "vladdoster/remember.nvim",
   "terrortylor/nvim-comment",
   "akinsho/toggleterm.nvim",
@@ -43,10 +43,7 @@ local plugins = { -- Add plugins here!
   },
 
   -- Code highlighting
-  {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
-  },
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
 
   -- Fuzzy finder
   {
@@ -54,6 +51,7 @@ local plugins = { -- Add plugins here!
     tag = "0.1.2",
     dependencies = "nvim-lua/plenary.nvim",
   },
+
 
   -- Autocomplete and LSP
   "neovim/nvim-lspconfig",
