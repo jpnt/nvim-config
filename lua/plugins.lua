@@ -41,6 +41,11 @@ local plugins = { -- Add plugins here!
       { "m00qek/baleia.nvim", tag = "v1.3.0" },
     },
   },
+  {
+    "yutkat/confirm-quit.nvim",
+    event = "CmdlineEnter",
+    opts = {},
+  },
 
   -- Code highlighting
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
