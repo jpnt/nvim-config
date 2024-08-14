@@ -24,7 +24,6 @@ local plugins = { -- Add plugins here!
   "nvim-tree/nvim-tree.lua",
   "windwp/nvim-autopairs",
   "Darazaki/indent-o-matic",
-  "woosaaahh/sj.nvim",
   "vladdoster/remember.nvim",
   "terrortylor/nvim-comment",
   "akinsho/toggleterm.nvim",
