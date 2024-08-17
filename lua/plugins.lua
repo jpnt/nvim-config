@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = { -- Add plugins here!
   -- Editor appearance
-  { "bluz71/vim-moonfly-colors", name = "moonfly", lazy = false, priority = 1000 },
+  { "miikanissi/modus-themes.nvim", priority = 1000 },
   "kyazdani42/nvim-web-devicons",
   "nvim-lualine/lualine.nvim",
   "goolord/alpha-nvim",
@@ -55,7 +55,6 @@ local plugins = { -- Add plugins here!
     tag = "0.1.2",
     dependencies = "nvim-lua/plenary.nvim",
   },
-
 
   -- Autocomplete and LSP
   "neovim/nvim-lspconfig",
