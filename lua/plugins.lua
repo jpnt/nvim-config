@@ -16,17 +16,17 @@ local plugins = { -- Add plugins here!
   -- Editor appearance
   { "miikanissi/modus-themes.nvim", priority = 1000 },
   "kyazdani42/nvim-web-devicons",
-  "nvim-lualine/lualine.nvim",
+  { "nvim-lualine/lualine.nvim", config = true },
   "goolord/alpha-nvim",
   "xiyaowong/transparent.nvim",
 
   -- QoL improvements
   "nvim-tree/nvim-tree.lua",
-  "windwp/nvim-autopairs",
+  { "windwp/nvim-autopairs", config = true },
   "Darazaki/indent-o-matic",
-  "vladdoster/remember.nvim",
+  { "vladdoster/remember.nvim", config = true },
   "terrortylor/nvim-comment",
-  "akinsho/toggleterm.nvim",
+  { "akinsho/toggleterm.nvim", config = true },
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -54,6 +54,7 @@ local plugins = { -- Add plugins here!
     "nvim-telescope/telescope.nvim",
     tag = "0.1.2",
     dependencies = "nvim-lua/plenary.nvim",
+    config = true,
   },
 
   -- Autocomplete and LSP
@@ -70,8 +71,9 @@ local plugins = { -- Add plugins here!
   "L3MON4D3/LuaSnip",
 
   -- Git features
-  "NeogitOrg/neogit",
-  "lewis6991/gitsigns.nvim",
+  { "NeogitOrg/neogit", config = true },
+  { "lewis6991/gitsigns.nvim", config = true },
+  { "akinsho/git-conflict.nvim", tag = "v2.0.0", config = true },
 }
 
 local opts = {}

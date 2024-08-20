@@ -3,7 +3,7 @@ local g = vim.g -- Global variables
 
 -- Colorscheme
 o.background = "dark"
-vim.cmd([[colorscheme modus]])
+vim.cmd([[colorscheme modus_vivendi]])
 
 -- General options
 o.number = true
