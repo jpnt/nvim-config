@@ -2,8 +2,7 @@ local o = vim.o -- Options
 local g = vim.g -- Global variables
 
 -- Colorscheme
-o.background = "dark"
-vim.cmd([[colorscheme modus_vivendi]])
+vim.cmd "colorscheme modus_vivendi"
 
 -- General options
 o.number = true
