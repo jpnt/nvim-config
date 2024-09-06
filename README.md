@@ -28,7 +28,7 @@ Neovim configuration files are generally placed under the directory:
 
 To clone the contents of this repository to that directory use the following command:
 
-```bash
+```sh
 git clone https://github.com/jpnt/nvim-config.git $HOME/.config/nvim --depth=1
 ```
 
@@ -44,16 +44,10 @@ graph LR;
     init.lua-->options;
     init.lua-->keymaps;
 
-    plugin_config-->lualine;
-    plugin_config-->alpha-nvim;
-    plugin_config-->nvim-autopairs;
-    plugin_config-->nvim-tree;
-    plugin_config-->treesitter;
-    plugin_config-->telescope;
+    plugin_config-->lspconfig;
     plugin_config-->completion;
-    plugin_config-->nvim-lspconfig;
-    plugin_config-->neogit;
-    plugin_config-->gitsigns;
+    plugin_config-->treesitter;
+    plugin_config-->alpha-nvim;
 ```
 
 ## Plugin list

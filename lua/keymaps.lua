@@ -1,4 +1,5 @@
 local map = vim.keymap.set
+-- local map = vim.api.nvim_set_keymap -- Future use
 local opts = { noremap = true, silent = true }
 
 -- General
@@ -13,8 +14,8 @@ map("n", "<leader>cd", ":cd %:p:h<CR>")    -- Change to current directory
 map("n", "<Tab>", ":bnext<CR>")
 map("n", "<S-Tab>", ":bprevious<CR>")
 
--- NvimTree
-map("n", "<C-n>", ":NvimTreeToggle<CR>", opts)
+-- Neotree
+map("n", "<C-n>", ":Neotree<CR>", opts)
 
 -- Neogit
 map("n", "<C-g>", ":Neogit<CR>", opts)
@@ -25,12 +26,9 @@ map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
 -- Compile mode
 map("n", "<leader>cc", ":Compile<CR>", opts)
 
--- Telescope
-local builtin = require("telescope.builtin")
-map("n", "<leader>ff", builtin.find_files, {})
-map("n", "<leader>fg", builtin.live_grep, {})
-map("n", "<leader>fb", builtin.buffers, {})
-map("n", "<leader>fh", builtin.help_tags, {})
+-- Snap Fuzzy finder
+local snap = require("snap")
+map("n", "<leader><leader>", snap.config.file{producer = "ripgrep.file"}, {})
 
 -- LSP
 map("n", "<leader>e", vim.diagnostic.open_float)
@@ -65,16 +63,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, opts)
   end,
 })
-
--- Harpoon
-local harpoon = require("harpoon")
-
-harpoon:setup()
-
-map("n", "<leader>a", function() harpoon:list():add() end)
-map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-
-map("n", "<C-h>", function() harpoon:list():select(1) end)
-map("n", "<C-j>", function() harpoon:list():select(2) end)
-map("n", "<C-k>", function() harpoon:list():select(3) end)
-map("n", "<C-l>", function() harpoon:list():select(4) end)

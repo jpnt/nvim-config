@@ -15,47 +15,56 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = { -- Add plugins here!
   -- Editor appearance
   { "miikanissi/modus-themes.nvim", priority = 1000 },
-  "kyazdani42/nvim-web-devicons",
-  { "nvim-lualine/lualine.nvim", config = true },
   "goolord/alpha-nvim",
   "xiyaowong/transparent.nvim",
+  {
+    "sontungexpt/sttusline",
+    branch = "table_version",
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    event = { "BufEnter" },
+    config = true,
+  },
 
   -- QoL improvements
-  "nvim-tree/nvim-tree.lua",
-  { "windwp/nvim-autopairs", config = true },
   "Darazaki/indent-o-matic",
-  { "vladdoster/remember.nvim", config = true },
   "terrortylor/nvim-comment",
+  { "windwp/nvim-autopairs", config = true },
+  { "vladdoster/remember.nvim", config = true },
   { "akinsho/toggleterm.nvim", config = true },
+
+  -- File system tree
   {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    dependencies = "nvim-lua/plenary.nvim",
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    }
   },
+
+  -- Code/Command runner
   {
     "ej-shafran/compile-mode.nvim",
-    branch = "latest",
+    tag = "v5.*",
     dependencies = {
       "nvim-lua/plenary.nvim",
       { "m00qek/baleia.nvim", tag = "v1.3.0" },
     },
-  },
-  {
-    "yutkat/confirm-quit.nvim",
-    event = "CmdlineEnter",
-    opts = {},
+    config = function()
+      vim.g.compile_mode = {
+        baleia_setup = true,
+      }
+    end
   },
 
   -- Code highlighting
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
 
   -- Fuzzy finder
-  {
-    "nvim-telescope/telescope.nvim",
-    tag = "0.1.2",
-    dependencies = "nvim-lua/plenary.nvim",
-    config = true,
-  },
+  "camspiers/snap",
 
   -- Autocomplete and LSP
   "neovim/nvim-lspconfig",
@@ -71,11 +80,24 @@ local plugins = { -- Add plugins here!
   "L3MON4D3/LuaSnip",
 
   -- Git features
-  { "NeogitOrg/neogit", config = true },
   { "lewis6991/gitsigns.nvim", config = true },
   { "akinsho/git-conflict.nvim", tag = "v2.0.0", config = true },
+  {
+    "NeogitOrg/neogit",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = true
+  },
+
+  -- Markdown editing
+  {
+    "OXY2DEV/markview.nvim",
+    lazy = false, -- Recommended
+    dependencies = {
+      "nvim-treesitter/nvim-treesitter",
+      "nvim-tree/nvim-web-devicons"
+    },
+  },
 }
 
 local opts = {}
-
 require("lazy").setup(plugins, opts)
