@@ -64,7 +64,7 @@ local plugins = { -- Add plugins here!
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
 
   -- Fuzzy finder
-  "camspiers/snap", -- Requires rg (ripgrep) and fzy
+  "camspiers/snap", -- Requires rg (ripgrep) and fzf
 
   -- Autocomplete and LSP
   "neovim/nvim-lspconfig",
