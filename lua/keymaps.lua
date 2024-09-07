@@ -22,6 +22,7 @@ map("n", "<C-g>", ":Neogit<CR>", opts)
 
 -- Toggleterm
 map("n", "<leader>tt", ":ToggleTerm<CR>", opts)
+map("n", "<leader>ts", ":ToggleTermSendVisualLines<CR>", opts)
 
 -- Compile mode
 map("n", "<leader>cc", ":Compile<CR>", opts)
