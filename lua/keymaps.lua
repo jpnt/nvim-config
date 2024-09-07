@@ -1,13 +1,13 @@
 local map = vim.keymap.set
--- local map = vim.api.nvim_set_keymap -- Future use
+--local map = vim.api.nvim_set_keymap        -- Future use
 local opts = { noremap = true, silent = true }
 
 -- General
 map("i", "kj", "<ESC>", opts)              -- Quickly get into normal mode
 map("i", "jk", "<ESC>", opts)              -- ""
 map("n", "<ESC>", ":nohlsearch<CR>", opts) -- Disable highlighted search results
-map("i", "<C-u>", "<ESC>viwUea")           -- Turn the word under cursor to upper case
-map("i", "<C-t>", "<ESC>b~lea")            -- Turn the current word into title case
+--map("i", "<C-u>", "<ESC>viwUea")           -- Turn the word under cursor to upper case
+--map("i", "<C-t>", "<ESC>b~lea")            -- Turn the current word into title case
 map("n", "<leader>cd", ":cd %:p:h<CR>")    -- Change to current directory
 
 -- Navigate buffers
