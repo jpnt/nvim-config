@@ -1,14 +1,11 @@
 local map = vim.keymap.set
---local map = vim.api.nvim_set_keymap        -- Future use
 local opts = { noremap = true, silent = true }
 
 -- General
 map("i", "kj", "<ESC>", opts)              -- Quickly get into normal mode
 map("i", "jk", "<ESC>", opts)              -- ""
 map("n", "<ESC>", ":nohlsearch<CR>", opts) -- Disable highlighted search results
---map("i", "<C-u>", "<ESC>viwUea")           -- Turn the word under cursor to upper case
---map("i", "<C-t>", "<ESC>b~lea")            -- Turn the current word into title case
-map("n", "<leader>cd", ":cd %:p:h<CR>")    -- Change to current directory
+map("n", "<leader>cd", ":cd %:p:h<CR>") -- Change to current directory
 
 -- Navigate buffers
 map("n", "<Tab>", ":bnext<CR>")
@@ -27,9 +24,12 @@ map("n", "<leader>ts", ":ToggleTermSendVisualLines<CR>", opts)
 -- Compile mode
 map("n", "<leader>cc", ":Compile<CR>", opts)
 
--- Snap Fuzzy finder
+-- Buffish: Buffer switcher
+map("n", "<leader>ss", ":Buffish<CR>", opts)
+
+-- Snap: Fuzzy finder
 local snap = require("snap")
-map("n", "<leader><leader>", snap.config.file{producer = "ripgrep.file"}, {})
+map("n", "<leader><leader>", snap.config.file { producer = "ripgrep.file" }, {})
 
 -- LSP
 map("n", "<leader>e", vim.diagnostic.open_float)

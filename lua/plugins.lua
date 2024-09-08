@@ -34,6 +34,9 @@ local plugins = { -- Add plugins here!
   { "vladdoster/remember.nvim", config = true },
   { "akinsho/toggleterm.nvim", config = true },
 
+  -- Buffer switcher
+  "mong8se/buffish.nvim",
+
   -- File system tree
   {
     "nvim-neo-tree/neo-tree.nvim",
