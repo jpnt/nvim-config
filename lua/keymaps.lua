@@ -11,8 +11,8 @@ map("n", "<leader>cd", ":cd %:p:h<CR>") -- Change to current directory
 map("n", "<Tab>", ":bnext<CR>")
 map("n", "<S-Tab>", ":bprevious<CR>")
 
--- Neotree
-map("n", "<C-n>", ":Neotree<CR>", opts)
+-- Oil: File system explorer
+map("n", "<C-n>", ":Oil<CR>", opts)
 
 -- Neogit
 map("n", "<C-g>", ":Neogit<CR>", opts)

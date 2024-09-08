@@ -37,15 +37,12 @@ local plugins = { -- Add plugins here!
   -- Buffer switcher
   "mong8se/buffish.nvim",
 
-  -- File system tree
+  -- File system explorer
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
+    "stevearc/oil.nvim",
     dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    }
+      "nvim-tree/nvim-web-devicons"
+    },
   },
 
   -- Code/Command runner
