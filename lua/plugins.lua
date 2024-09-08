@@ -40,6 +40,7 @@ local plugins = { -- Add plugins here!
   -- File system explorer
   {
     "stevearc/oil.nvim",
+    tag = "stable",
     dependencies = {
       "nvim-tree/nvim-web-devicons"
     },
