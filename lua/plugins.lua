@@ -91,6 +91,7 @@ local plugins = { -- Add plugins here!
   -- Markdown editing
   {
     "OXY2DEV/markview.nvim",
+    tag = "v22.1.0",
     lazy = false, -- Recommended
     dependencies = {
       "nvim-treesitter/nvim-treesitter",
