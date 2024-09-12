@@ -2,10 +2,10 @@ local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
 
 -- General
-map("i", "kj", "<ESC>", opts)              -- Quickly get into normal mode
-map("i", "jk", "<ESC>", opts)              -- ""
-map("n", "<ESC>", ":nohlsearch<CR>", opts) -- Disable highlighted search results
-map("n", "<leader>cd", ":cd %:p:h<CR>") -- Change to current directory
+map("i", "kj", "<ESC>", opts)                   -- Quickly get into normal mode
+map("i", "jk", "<ESC>", opts)                   -- ""
+map("n", "<ESC>", ":nohlsearch<CR>", opts)      -- Disable highlighted search results
+map("n", "<leader>cd", ":cd %:p:h<CR>:pwd<CR>") -- Change to current directory
 
 -- Navigate buffers
 map("n", "<Tab>", ":bnext<CR>")
@@ -24,8 +24,8 @@ map("n", "<leader>ts", ":ToggleTermSendVisualLines<CR>", opts)
 -- Compile mode
 map("n", "<leader>cc", ":Compile<CR>", opts)
 
--- Buffish: Buffer switcher
-map("n", "<leader>ss", ":Buffish<CR>", opts)
+-- Nvim Ripgrep
+map("n", "<leader>rg", ":Rg<CR>", opts)
 
 -- Snap: Fuzzy finder
 local snap = require("snap")

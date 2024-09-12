@@ -34,9 +34,6 @@ local plugins = { -- Add plugins here!
   { "vladdoster/remember.nvim", config = true },
   { "akinsho/toggleterm.nvim", config = true },
 
-  -- Buffer switcher
-  "mong8se/buffish.nvim",
-
   -- File system explorer
   {
     "stevearc/oil.nvim",
@@ -61,8 +58,11 @@ local plugins = { -- Add plugins here!
     end
   },
 
+  -- Grep
+  "duane9/nvim-rg",
+
   -- Code highlighting
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate", },
+  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
 
   -- Fuzzy finder
   "camspiers/snap", -- Requires rg (ripgrep) and fzf
