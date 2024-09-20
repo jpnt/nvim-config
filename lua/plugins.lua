@@ -74,6 +74,14 @@ local plugins = { -- Add plugins here!
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
   "hrsh7th/nvim-cmp",
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "VeryLazy",
+    opts = {},
+    config = function(_, opts)
+      require'lsp_signature'.setup(opts)
+    end
+  },
 
   -- Code snippets
   "saadparwaiz1/cmp_luasnip",
