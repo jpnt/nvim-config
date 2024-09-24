@@ -29,7 +29,7 @@ map("n", "<leader>rg", ":Rg<CR>", opts)
 
 -- Snap: Fuzzy finder
 local snap = require("snap")
-map("n", "<leader><leader>", snap.config.file { producer = "ripgrep.file" }, {})
+map("n", "<F1>", snap.config.file { producer = "ripgrep.file" }, {})
 
 -- LSP
 map("n", "<leader>e", vim.diagnostic.open_float)

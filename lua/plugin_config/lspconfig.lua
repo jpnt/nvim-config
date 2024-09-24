@@ -6,6 +6,7 @@ local servers = {
   "rust_analyzer",
   "pylsp",
   "gopls",
+  "ts_ls",
 }
 
 -- Setup each language servers
