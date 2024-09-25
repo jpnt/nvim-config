@@ -84,17 +84,10 @@ local plugins = { -- Add plugins here!
   "neovim/nvim-lspconfig",
   "onsails/lspkind.nvim",
   "hrsh7th/cmp-nvim-lsp",
+  "hrsh7th/cmp-nvim-lsp-signature-help",
   "hrsh7th/cmp-buffer",
   "hrsh7th/cmp-path",
   "hrsh7th/nvim-cmp",
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "VeryLazy",
-    opts = {},
-    config = function(_, opts)
-      require'lsp_signature'.setup(opts)
-    end
-  },
 
   -- Code snippets
   "saadparwaiz1/cmp_luasnip",
