@@ -15,7 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = { -- Add plugins here!
   -- Editor appearance
   { "miikanissi/modus-themes.nvim", priority = 1000 },
-  "goolord/alpha-nvim",
+  "goolord/alpha-nvim", -- Greeter screen
   "xiyaowong/transparent.nvim",
   {
     "sontungexpt/sttusline",
@@ -30,9 +30,17 @@ local plugins = { -- Add plugins here!
   -- QoL improvements
   "Darazaki/indent-o-matic",
   "terrortylor/nvim-comment",
-  { "windwp/nvim-autopairs", config = true },
   { "vladdoster/remember.nvim", config = true },
-  { "akinsho/toggleterm.nvim", config = true },
+  {
+    "windwp/nvim-autopairs",
+    event = "VeryLazy",
+    config = true
+  },
+  {
+    "akinsho/toggleterm.nvim",
+    event = "VeryLazy",
+    config = true
+  },
 
   -- File system explorer
   {
@@ -46,6 +54,7 @@ local plugins = { -- Add plugins here!
   -- Code/Command runner
   {
     "ej-shafran/compile-mode.nvim",
+    event = "VeryLazy",
     tag = "v5.2.0",
     dependencies = {
       "nvim-lua/plenary.nvim",
@@ -62,7 +71,11 @@ local plugins = { -- Add plugins here!
   "duane9/nvim-rg",
 
   -- Code highlighting
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    event = "BufRead",
+    build = ":TSUpdate"
+  },
 
   -- Fuzzy finder
   "camspiers/snap", -- Requires rg (ripgrep) and fzf
@@ -86,27 +99,25 @@ local plugins = { -- Add plugins here!
   -- Code snippets
   "saadparwaiz1/cmp_luasnip",
   "rafamadriz/friendly-snippets",
-  "L3MON4D3/LuaSnip",
+  {
+    "L3MON4D3/LuaSnip",
+    event = "VeryLazy"
+  },
 
   -- Git features
   { "lewis6991/gitsigns.nvim", config = true },
-  { "akinsho/git-conflict.nvim", tag = "v2.0.0", config = true },
+  {
+    "akinsho/git-conflict.nvim",
+    tag = "v2.0.0",
+    config = true
+  },
   {
     "NeogitOrg/neogit",
+    event = "VeryLazy",
     dependencies = "nvim-lua/plenary.nvim",
     config = true
   },
 
-  -- Markdown editing
-  {
-    "OXY2DEV/markview.nvim",
-    tag = "v22.1.0",
-    lazy = false, -- Recommended
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-tree/nvim-web-devicons"
-    },
-  },
 }
 
 local opts = {}
