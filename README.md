@@ -1,3 +1,7 @@
+# ⚠️ This repository is deprecated
+
+I've moved my neovim configuration to my main [dotfiles repository](https://github.com/jpnt/.dotfiles/tree/main/nvim/.config/nvim).
+
 # nvim-config
 
 Personal neovim configuration
